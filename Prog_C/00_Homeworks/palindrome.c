@@ -56,6 +56,7 @@ int main()
     
     do {
         memset(string,0,sizeof(string));
+        memset(reverse_str,0,sizeof(string));
         gets(string); /// PalindromPalindrom 
         strcpy(string_orig, string);
 
@@ -67,14 +68,14 @@ int main()
         compare_finish = compare(string, koniec);
 
         if (!compare_result && !compare_finish) {
-            int length = strlen(string);
-            strncat(final_string, string, length);
+            int length = strlen(string_orig);
+            strncat(final_string, string_orig, length);
             char nie[14] = "\tNIE\n";
             strncat(final_string, nie, strlen(nie));
         }
         else if (compare_result && !compare_finish) {
-            int length = strlen(string);
-            strncat(final_string, string, length);
+            int length = strlen(string_orig);
+            strncat(final_string, string_orig, length);
             char ano[14] = "\tANO\n";
             strncat(final_string, ano, strlen(ano));
         }
