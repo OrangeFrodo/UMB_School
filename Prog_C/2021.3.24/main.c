@@ -56,7 +56,6 @@ void pridaj(CLOVEK p[MAX], int *pocet)
 
     (*pocet)++;
 //  system("cls");
-    system("clear");
 
 }
 //--------------------------------------
@@ -84,14 +83,13 @@ void uloz(CLOVEK p[MAX], int pocet)
     fclose(f);
 }
 //--------------------------------------
-void nacitaj(CLOVEK p[MAX], int *pocet)
-{
+void nacitaj(CLOVEK p[MAX], int *pocet){
     FILE *f;
     f = fopen("data.txt", "r");
 
-    fscanf(f, "%[^,], %[^,], %d", p[*pocet].meno, p[*pocet].priezv, &p[*pocet].vek);
-    (*pocet)++;
-
+    while(fscanf(f, "%[^,],%[^,],%d\n", p[*pocet].meno, p[*pocet].priezv, &p[*pocet].vek) != EOF){ 
+        (*pocet)++;
+    }
     fclose(f);
 }
 //--------------------------------------
