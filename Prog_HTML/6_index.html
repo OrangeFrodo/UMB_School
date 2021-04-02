@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: O;
+            padding: 0;
+            align-items: center;
+
+        }
+        .table_mid{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: red;
+        }
+        table, th, td {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <table class="table_mid" style="width:400px">
+        <caption style="color:black">Pridajte tabuľke popis</caption>
+        <tr>
+            <th>Krajna</th>
+            <th>Mesto</th>
+            <th>Sidlisko</th>
+        </tr>
+        <tr>
+            <td>SK</td>
+            <td>BB</td>
+            <td>Sladkovi</td>
+        </tr>
+        <tr>
+            <td>UK</td>
+            <td>LON</td>
+            <td>Evagreen</td>
+        </tr>
+        <tr>
+            <td>UK</td>
+            <td>LON</td>
+            <td>Evagreen</td>
+        </tr>
+        <tr>
+            <td>UK</td>
+            <td>LON</td>
+            <td>Evagreen</td>
+        </tr>
+    </table>
+</body>
+    <script>
+    $( "tr:odd" ).css( "background-color", "#bb48f2" );
+    </script>
+</html>
