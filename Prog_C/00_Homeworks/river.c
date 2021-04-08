@@ -28,6 +28,9 @@ int main()
             min = sum;
             pom = i;
         }
+        if(sum == min) {
+            pom = (arr[pom]<arr[i] ? i : pom);
+        }
     }
 
     days = (arr[pom] > arr[pom+1]) ? arr[pom] : arr[pom+1];
