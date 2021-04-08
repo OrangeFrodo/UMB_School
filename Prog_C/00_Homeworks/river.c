@@ -25,7 +25,7 @@ int main()
         if(i == 0) min = arr[i] + arr[i+1];
         sum = arr[i] + arr[i+1];
         if(sum < min) {
-            min = sum;
+            min = sum; 
             pom = i;
         }
         if(sum == min) {
