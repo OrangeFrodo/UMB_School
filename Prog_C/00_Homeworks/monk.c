@@ -28,23 +28,26 @@ int main(int argc, char const *argv[])
     i = 1;
     int sum = 0, final_c = 0;
 
-    while (pomSize != 0) {
-        sum += arr[i-1];
-        if (sum > stepSize) {
-            final_c += recursionN(i-1);
-            i = 0;
-            sum = 0;
+    if (numStep != 1) {
+        while (pomSize != 0) {
+            sum += arr[i-1];
+            if (sum > stepSize) {
+                final_c += recursionN(i-1);
+                i = 0; sum = 0;     // Del
+            }
+            else if (sum == stepSize) {
+                final_c += recursionN(i);
+                i = 0; sum = 0;     // Del
+            }
+            i++;
+            pomSize--;
         }
-        else if (sum == stepSize) {
-            final_c += recursionN(i);
-            i = 0;
-            sum = 0;
+        if (i != 0) {
+           final_c += recursionN(i-1);
         }
-        i++;
-        pomSize--;
     }
-    if (i != 0) {
-        final_c += recursionN(i-1);
+    else {
+        final_c = 1;
     }
 
     printf("%d", final_c);
