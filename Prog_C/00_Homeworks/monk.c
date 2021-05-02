@@ -6,7 +6,7 @@ long int recursionN(int n) {
         return 2*recursionN(n-1);
     else
         return 2;
-}
+} 
 
 int main(int argc, char const *argv[])
 {   
