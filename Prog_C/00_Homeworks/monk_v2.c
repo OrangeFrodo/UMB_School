@@ -6,12 +6,15 @@ int main(){
     int n,i,*h,*ps,*s, d;
 
     scanf("%d%d",&n, &d);
+
     ps = (int*) malloc(sizeof(int) * (n+1));
     h = (int*) malloc(sizeof(int) * (n+1));
     s = (int*) malloc(sizeof(int) * (n+1));
+
     for(i=1;i<=n;i++){
         scanf("%d",&h[i]);
     }
+
     ps[0]=1;
     ps[1]=ps[0];
     s[0]=0;
@@ -26,6 +29,7 @@ int main(){
             j--;
         }
     }
+    
     printf("%d \n", ps[n]);
 
     free(h);
