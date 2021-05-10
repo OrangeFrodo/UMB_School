@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-
 int Dijkstra(int n, int* A, int a){
 
     int i,j;
@@ -68,6 +67,7 @@ int Dijkstra(int n, int* A, int a){
                 MinimalPathSource[2][j] = MinimalPathSource[2][j+1];
             }
         }
+
         num--;
         for(j=0; j<num; j++){
             if(MinimalPathSource[1][j] > (min+*(A+n*ind+MinimalPathSource[0][j]))){
@@ -99,25 +99,25 @@ int Display(int* path, int* LMPS, int n, int a){
     int i,j,k;
 
     printf("\nOdpovede:");
-    for(i=0;i<n;i++){
-        for(j=0;j<n-1;j++) {
+    for(i=0; i<n; i++){
+        for(j=0; j<n-1; j++) {
             if(i!=a-1 && *(LMPS+2*j)==i){
-                printf("\n\n\tWeight of vertex no.%d is %d",*(LMPS+2*j)+1,*(LMPS+2*j+1));
-                printf(".\n\tand corresponding path direction is:  %d",a);
-                for(k=1;k<n;k++) {
+                printf("\n\n\tWeight of vertex no.%d is %d", *(LMPS+2*j)+1, *(LMPS+2*j+1));
+                printf(".\n\tand corresponding path direction is:  %d", a);
+                for(k=1; k<n; k++) {
                     if(*(path+j*n+k)!=0) {
-                        printf(" --> %d",*(path+j*n+k));
+                        printf(" --> %d", *(path+j*n+k));
                     }
                 }      
             }
         }
     }
             
-    printf("\n\nThe path matrix is:");
-    for(i=0;i<n-1;i++){
+    printf("\n\nCesta k bodom:");
+    for(i=0; i<n-1; i++){
         printf("\n\n");
-        for(j=0;j<n;j++)
-            printf("\t%d",*(path+i*n+j));
+        for(j=0; j<n; j++)
+            printf("\t%d", *(path+i*n+j));
     }
 }
 
@@ -125,7 +125,7 @@ int main(){
     int n,i,j,a;
 
     printf("Pocet vectorov:");
-    scanf("%d",&n);
+    scanf("%d", &n);
 
     int num=n-1, Arr[n][n];
 
@@ -137,7 +137,6 @@ int main(){
         }
     }
 
-    //Printing the adjacency Matrix:
     printf("\nMaticova reprezentacia:\n");
     for(i=0; i<n; i++){
         printf("\n");
