@@ -124,7 +124,7 @@ int Display(int* path, int* LMPS, int n, int a){
 int main(){
     int n,i,j,a;
 
-    printf("Pocet ciest: ");
+    printf("Pocet vectorov:");
     scanf("%d", &n);
 
     int num=n-1, Arr[n][n];
