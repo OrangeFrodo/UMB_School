@@ -1,0 +1,17 @@
+.navbar-right-part {
+    justify-content: flex-end;
+}
+
+.carousel {
+    position: relative;
+    z-index: 1;
+}
+
+.bg {
+    position:absolute;
+	background:rgba(0,0,0,0.7);
+	left:0;
+	width:50%;
+	height:50%;
+	z-index:2;
+}

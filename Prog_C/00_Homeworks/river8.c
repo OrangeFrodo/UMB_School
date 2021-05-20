@@ -31,50 +31,22 @@ int rekurzia(int mesto, int m[], int n)
     int ii;
     if(mesto == n)
     {
-        #ifdef DEBUG
-        printf("\n");
-        printf("%3d\t", b++);
-        for(ii=0; ii<n; ii++){
-            printf("%c ",premena(m[ii]));
-        }
-        printf("\t");
-        #endif // DEBUG
         int ok = 1;
         if(m[0] == 0 || m[n-1] == 2)
         {
             ok = 0;
-            #ifdef DEBUG
-            printf("a");
-            #endif // DEBUG
             return(0);
         }
-//        for(ii=1; ii<n-1; ii++)
-//        {
-//            if(m[ii-1] == 2 && m[ii+1] == 0)
-//            {
-//                ok = 0;
-//                #ifdef DEBUG
-//                printf("b");
-//                #endif // DEBUG
-//                return(0);
-//            }
-//        }
         for(ii=0; ii<n-1; ii++)
         {
             if(m[ii] == 2 && m[ii+1] == 0)
             {
                 ok = 0;
-                #ifdef DEBUG
-                printf("c");
-                #endif // DEBUG
                 return(0);
             }
         }
         if(ok)
         {
-            #ifdef DEBUG
-            printf(" ok");
-            #endif // DEBUG
             pocet++;
         }
         return(0);
