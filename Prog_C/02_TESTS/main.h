@@ -1,13 +1,7 @@
-/* 
+#include <stdlib.h>
+#include <stdio.h>
 
-1. Termín, dobré hlavičkové súbory
+#define MAX_SIZE 100000
 
-int load_input (int *, int *, int **);
-int compare(int *, int **);
-int find(int *, char **); 
-*/
-
-
-
-int funk(int *, char)
-
+void findStart(int row, int colums, char array[][]);
+void findPath(int row, int culums, char arrayOf[][]);
