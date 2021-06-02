@@ -7,7 +7,7 @@ int main(int argc, char const *argv[])
 
     char matrix[row][colums];
 
-    char array[MAX_SIZE];
+    // char array[MAX_SIZE];
 
     size_t k = 0;
 
