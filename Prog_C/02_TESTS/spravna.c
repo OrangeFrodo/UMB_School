@@ -1,5 +1,5 @@
 #include <string.h>
-#include <stdio.h>
+
 
 int main(){
 
@@ -7,10 +7,7 @@ int main(){
     scanf("%d %d", &n, &nc);
     char c[100];
     scanf("%s", c);
-    
     p = funk(n, c);
-
-    printf("%d", p);
 
     return 0;
 }

@@ -1,21 +1,24 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include "main.h"
 
-int Dijkstra(int n, int* A, int a){
+int Dijkstra(int numOfNodes, int* A, int a){
 
-    int i,j;
+    size_t i,j; // For loop /If VARS
+
     int k,min,ind,sv;
-    int num=n-1;
-    int MinimalPathSource[3][num];
-    int ListingMinimalPathSource[num][2],path[n-1][n];
+    int num=numOfNodes-1;
 
-    for(i=0;i<n-1;i++)  {
-        for(j=0;j<n;j++) {
+    unsigned int MinimalPathSource[3][num];          // Matrix for CURRENT WEIGHT source
+    unsigned int ListingMinimalPathSource[num][2];   // Save for every node
+    unsigned int path[numOfNodes-1][numOfNodes];     // Path to every node
+
+    // Set Null Matrix (path)
+    for(i=0; i<numOfNodes-1; i++)  {
+        for(j=0; j<numOfNodes; j++) {
             path[i][j]=0;
         }
     }
             
-    for(i=0;i<n-1;i++){
+    for(i=0;i<numOfNodes-1;i++){
         //First path vertex:
         if(i==0){
             for(j=0;j<num;j++){
@@ -27,7 +30,7 @@ int Dijkstra(int n, int* A, int a){
                 MinimalPathSource[2][j]=a-1;
             }
             for(j=0;j<num;j++)
-                MinimalPathSource[1][j]=*(A+(a-1)*n+MinimalPathSource[0][j]);
+                MinimalPathSource[1][j]=*(A+(a-1)*numOfNodes+MinimalPathSource[0][j]);
         }
 
         //Minimu vertex callculation:
@@ -70,28 +73,28 @@ int Dijkstra(int n, int* A, int a){
 
         num--;
         for(j=0; j<num; j++){
-            if(MinimalPathSource[1][j] > (min+*(A+n*ind+MinimalPathSource[0][j]))){
-                MinimalPathSource[1][j] = (min+*(A+n*ind+MinimalPathSource[0][j]));
+            if(MinimalPathSource[1][j] > (min+*(A+numOfNodes*ind+MinimalPathSource[0][j]))){
+                MinimalPathSource[1][j] = (min+*(A+numOfNodes*ind+MinimalPathSource[0][j]));
                 MinimalPathSource[2][j] = ind;
             }
         }
 
         /*Preparing the path direction matrix*/
-        path[i][n-1]=ind+1;
+        path[i][numOfNodes-1]=ind+1;
         if(i!=0){
             if(a!=sv+1) {
-                path[i][n-2] = sv+1;
+                path[i][numOfNodes-2] = sv+1;
             }
             for(j=0; j<i; j++){
-                if(path[j][n-1]==sv+1) {
-                    for(k=2;k<n-1;k++) {
+                if(path[j][numOfNodes-1]==sv+1) {
+                    for(k=2;k<numOfNodes-1;k++) {
                         path[i][k-1]=path[j][k];
                     }
                 }
             }
         }
     }
-    Display(path,ListingMinimalPathSource,n,a);
+    Display(path,ListingMinimalPathSource,numOfNodes,a);
 }
 
 int Display(int* path, int* LMPS, int n, int a){
@@ -122,14 +125,16 @@ int Display(int* path, int* LMPS, int n, int a){
 }
 
 int main(){
-    int n,i,j,a;
+    int n, a;
+    size_t i, j; // For Loop VARS
 
-    printf("Pocet vectorov:");
+    puts("Num of Vectors:");
     scanf("%d", &n);
 
-    int num=n-1, Arr[n][n];
+    int num=n-1, Arr[n][n]; // Num of roads/ Matrix
 
-    printf("\nVzdialenosti vectorov:\n");
+    printf("\nDistance of Vectors:\n");
+    
     for(i=0; i<n; i++){
         printf("\n");
         for(j=0; j<n; j++){
@@ -137,7 +142,7 @@ int main(){
         }
     }
 
-    printf("\nMaticova reprezentacia:\n");
+    printf("\nMatrix representation:\n");
     for(i=0; i<n; i++){
         printf("\n");
         for(j=0; j<n; j++){
@@ -146,7 +151,7 @@ int main(){
     }
 
     printf("\n");
-    printf("\nZaciatok:");
+    puts("\nStart node:");
     scanf("%d", &a);
 
     Dijkstra(n, &Arr, a);
