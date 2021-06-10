@@ -33,6 +33,7 @@ int dijksAlgo(unsigned int nodeNumber, unsigned int start, int *ptrMatrix)
                 MinimalPathSource[2][j] = start - 1;
             }
             for (j = 0; j < num; j++) {
+                // Direct weight
                 MinimalPathSource[1][j] = *(ptrMatrix+(start-1)*nodeNumber+MinimalPathSource[0][j]);
             }
         }
@@ -99,7 +100,7 @@ int printPath(int* path, int* LMPS, int n, int a){
                 printf("\n\n\tWeight of vertex from source to no.%d is %d", *(LMPS+2*j) + 1, *(LMPS + 2 * j + 1));
                 printf(".\n\tand corresponding path direction is:  %d", a);
                 for (k = 1; k < n; k++) {
-                    if(*(path + j* n + k)!=0) {
+                    if(*(path + j* n + k) != 0) {
                         printf(" --> %d", *(path+j*n+k));
                     }
                 }      
