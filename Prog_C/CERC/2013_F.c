@@ -12,7 +12,7 @@ int loadMatrixFunction(char matrix[MATRIX][MATRIX], int *x, int *y) {
             scanf("%c", &matrix[i][j]);
 
             if (matrix[i][j] == 'W') {
-                *x = i + 1;
+                *x = i;
                 *y = j;
             }
         }
@@ -47,6 +47,7 @@ int recursionBoard(char matrix[11][11], int *x, int *y, int answer) {
     if (matrix[*x-1][*y+1] == '#' || matrix[*x-1][*y+1] == '#' || matrix[*x-1][*y+1] == '#' || matrix[*x-1][*y+1] == '#')
     {
         answer++;
+        
         return answer;
     } else {
         answer++;
@@ -76,6 +77,8 @@ int recursionBoard(char matrix[11][11], int *x, int *y, int answer) {
             recursionBoard(matrixRecursion,x, y, answer);
         }
     }
+
+    return answer;
 }
 
 int main(int argc, char const *argv[])
