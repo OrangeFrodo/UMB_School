@@ -7,6 +7,8 @@ int main()
     int n = 20;
     long long fakt = 1;
 
+    printf("Hello wol \n");
+
     /*i = 1;
     while (i<=n)
     {   
