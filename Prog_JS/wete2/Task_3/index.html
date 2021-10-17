@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_3</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Task 1
+    function showName(f_name, l_name) {
+        if( typeof (f_name && l_name) === 'string') {
+            return 49
+        }
+        else
+            return 0
+    }
+
+    const answer = showName("jakub", "daxner")
+
+    if (answer > 0) {
+        alert("Vek Janka Hraška je " + answer)
+    }
+    else if (answer == 0) {
+        alert(" Chyba - argumenty nie sú typu string")
+    }
+
+</script>
+
+<script>
+    // Task 2
+    let date = new Date()
+
+    let user = new Object()
+    user.f_name = "Janko"
+    user.l_name = " Hraško"
+    user.school = "UMB"
+
+    let user_2 = new Object()
+    user_2.f_name = "Durko"
+    user_2.l_name = " Mrkvička"
+    user_2.school = user.school
+
+    alert("Na dnešnej súťaži – " + date.getDate() + ". " + date.getMonth() + ". " + date.getFullYear() + " sa zúčastnili: \n"
+        + user.f_name + user.l_name + " - " + user.school + "\n"
+        + user_2.f_name + user_2.l_name + " - " + user.school + "\n"
+    )
+
+</script>
+
+<script>
+    // Task 3
+    let array = new Array()
+
+    for(i = 0; i<4; i++) {
+        array.push(Math.floor(Math.random() * 10 + 1))
+    }
+
+    const sortedArr = array.sort()
+
+    alert(sortedArr);
+
+</script>
+</html>
