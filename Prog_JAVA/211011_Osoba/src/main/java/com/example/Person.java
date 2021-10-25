@@ -13,8 +13,11 @@ public class Person
     private String name;
     private Date birthDate;
 
+    // Static = podčiarknuté červeno
+    // Private = červené mínus
     private static int num;
 
+    //
     public Person(String name) {
         this.name = name;
         // Static ++
@@ -25,6 +28,8 @@ public class Person
         System.out.println(this.name + " " + num);
     }
 
+    // Static = podčiarknuté červeno
+    // Public = červené plus
     public static int numOfPeople() {
         return num;
     }

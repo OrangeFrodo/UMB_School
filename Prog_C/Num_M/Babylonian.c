@@ -14,11 +14,15 @@ float babylonian_fun(float entered_value)
 {
     // 2.
     float x1 = entered_value;
-    float x0 = 1.0;
+    float x0 = 0; // 0 = Becouse now there is 100% certanty on 22. line
 
     // 3.
-    float error_size = 0.001;
+    // Enter error_size
+    float error_size;
+    printf("Enter error_size \n");
+    scanf("%f", &error_size);
 
+    //  For 1. iteration Entered_value - x0 = is alway greater than error_size
     while (x1 - x0 >= error_size)
     {
         x1 = (float)(x1 + x0) / (float)2;
@@ -33,17 +37,15 @@ int main(int argc, char const *argv[])
     float S;
     float ans;
 
-    scanf("%f", &S);
-
     // 1.
-    if (S <= 0)
+    do
     {
-        printf("Error, entered incorrect value \n");
-        return 0;
-    }
+        printf("Enter possitive value S \n");
+        scanf("%f", &S);
+    } while (S <= 0);
 
     ans = babylonian_fun(S);
-    printf("%f \n", ans);
+    printf("Answer = %f \n", ans);
 
     return 0;
 }

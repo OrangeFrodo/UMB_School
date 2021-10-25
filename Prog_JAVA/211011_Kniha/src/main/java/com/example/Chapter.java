@@ -17,9 +17,9 @@ public class Chapter
         this.content = o;
     }
     
-    // Print it
-    public void printOut()
+    // Print out chapters
+/*     public void printOut()
     {
         System.out.println("name: " + name + " content: " + content);
-    }
+    } */
 }

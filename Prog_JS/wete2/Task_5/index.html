@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <form name="loginForm" class="d-flex flex-column">
+      <div class="d-inline-flex p-3">
+        <p class="pr-3">Meno</p>
+        <input id="name" type="text" name="textName" />
+        <p id="excle1" class="pl-3" style="color: red; display: none">!</p>
+      </div>
+      <div class="d-inline-flex p-3">
+        <p class="pr-3">Priezvisko</p>
+        <input id="last" type="text" name="textLast" />
+        <p id="excle2" class="pl-3" style="color: red; display: none">!</p>
+      </div>
+      <div class="d-inline-flex p-3">
+        <p class="pr-3">Narodenie</p>
+        <input id="bday" type="text" name="textBDate" />
+        <p id="excle3" class="pl-3" style="color: red; display: none">!</p>
+      </div>
+      <div class="d-inline-flex p-3">
+        <p class="pr-3">Email</p>
+        <input id="email" type="text" name="textMail" />
+        <p id="excle4" class="pl-3" style="color: red; display: none">!</p>
+      </div>
+
+      <!--RADIO-->
+      <div class="d-inline-flex p-3">
+        <p class="pr-3">Pohlavie</p>
+        <div><p></p></div>
+        <p class="pr-3">Muž</p>
+        <input type="radio" name="sex" />
+        <p class="pr-3">Žena</p>
+        <input type="radio" name="sex" />
+        <p id="excle8" class="pl-3" style="color: red; display: none">!</p>
+        <div>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="d-inline-flex p-3">
+        <p class="pr-3">Heslo</p>
+        <input type="password" name="pass1" />
+        <p id="excle6" class="pl-3" style="color: red; display: none">!</p>
+      </div>
+      <div class="d-inline-flex p-3">
+        <p class="pr-3">Potvrdte heslo</p>
+        <input type="password" name="pass2" />
+        <p id="excle7" class="pl-3" style="color: red; display: none">!</p>
+      </div>
+      <button
+        onclick="validForm()"
+        style="text-align: center; margin: 20px"
+        type="button"
+        class="btn btn-primary"
+      >
+        Odošli
+      </button>
+    </form>
+  </body>
+  <script>
+    function validForm() {
+      console.log("A");
+
+      let name = document.loginForm.textName.value;
+      let last = document.loginForm.textLast.value;
+      let bday = document.loginForm.textBDate.value;
+      let email = document.loginForm.textMail.value;
+      let pass1 = document.loginForm.pass1.value;
+      let pass2 = document.loginForm.pass2.value;
+      let sex = document.loginForm.sex.value;
+
+      let boolRedirect = 1;
+
+      // Task 1
+      if (name == "") {
+        let excle = document.getElementById("excle1");
+        excle.style.display = "block";
+        boolRedirect = 0
+      }
+
+      if (last == "") {
+        let excle = document.getElementById("excle2");
+        excle.style.display = "block";
+        boolRedirect = 0
+      }
+      if (bday == "") {
+        let excle = document.getElementById("excle3");
+        excle.style.display = "block";
+        boolRedirect = 0
+      }
+
+      if (email == "") {
+        let excle = document.getElementById("excle4");
+        excle.style.display = "block";
+        boolRedirect = 0
+      }
+
+      if (pass1 == "") {
+        let excle = document.getElementById("excle6");
+        excle.style.display = "block";
+        boolRedirect = 0
+      }
+
+      if (pass2 == "") {
+        let excle = document.getElementById("excle7");
+        excle.style.display = "block";
+        boolRedirect = 0
+      }
+
+      if (sex == "") {
+        let excle = document.getElementById("excle8");
+        excle.style.display = "block";
+        boolRedirect = 0
+      }
+
+      // Task 2
+      let mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      const found = email.match(mailFormat);
+      
+      if (!found){
+        alert("Wront email")
+        boolRedirect = 0
+      }
+
+      // Task 3
+      if(!(pass1.match(pass2))){
+        alert("Passwords do not match")
+        boolRedirect = 0
+      }
+
+      if(boolRedirect) {
+        window.location.href = "https://www.google.com/";
+      }
+
+    }
+  </script>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type="button" class="btn btn-primary" onclick="btnFunction('btn1')">Primary</button>
+    <p id="5">Paragraf 1</p>
+    <button type="button" class="btn btn-secondary" onclick="btnFunction('btn2')">Secondary</button>
+    <p class="Para2">Paragraf 2</p>
+
+    <h1 id="header" onmouseover="mouseFun('in')" onmouseout="mouseFun('out')">Tento text sa prefarbí</h1>
+    <p id="para3">Tento text sa skryje/zobrazí po stlačení tlačídla.</p>
+    <button type="button" class="btn btn-danger" onclick="hideIt()">Danger</button>
+</body>
+
+<script>
+    // Task 1
+    function btnFunction(Type) {
+        let para1 = document.getElementById('5')
+        let para2 = document.getElementsByClassName('Para2')
+
+        if (Type == "btn1")
+            para1.innerHTML = "After click ID"
+        if (Type == "btn2") {
+
+            for (var i = 0; i < para2.length; i++) {
+                para2[i].innerText = "After click Class!"
+            }
+        }
+    }
+</script>
+
+<script>
+    // Task 2
+    function mouseFun(Type) {
+        let header = document.getElementById("header")
+        if (Type == "in") {
+            header.style.color = "red"
+        }
+        if (Type == "out") {
+            header.style.color = "black"
+        }
+    }
+
+
+    // Var for this.state
+    var state = 1;
+
+    function hideIt() {
+        let docs = document.getElementById('para3')
+        console.log("1 " + state)
+
+        if (state == 1) {
+            docs.style.display = "none"
+            this.state = 0
+            console.log(state)
+        }
+        else if (state == 0) {
+            docs.style.display = "block"
+            this.state = 1
+            console.log(state)
+        }
+    }
+</script>
+
+
+</html>
