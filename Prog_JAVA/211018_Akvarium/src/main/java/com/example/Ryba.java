@@ -8,6 +8,7 @@ public class Ryba
 {
     int x;
     int y;
+    boolean smer = false;
 
     public Ryba(int x, int y)
     {
@@ -17,5 +18,13 @@ public class Ryba
 
     boolean nachadzaSa(int x, int y) {
         return this.x == x && this.y == y; 
+    }
+
+    void pohybR(){
+        this.x++;
+    }
+
+    void pohybL(){
+        this.x--;
     }
 }

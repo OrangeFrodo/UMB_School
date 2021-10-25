@@ -14,5 +14,35 @@ public class App
     public void work() {
         Akvarium k1 = new Akvarium(30, 5, 5);
         k1.printAkva();
+        k1.move();
+        k1.printAkva();
+        k1.move();
+        k1.printAkva();
+        k1.move();
+        k1.printAkva();
+        k1.move();
+        k1.printAkva();
+        k1.move();
+        k1.printAkva();
+        k1.move();
+        k1.printAkva();
+        k1.move();
+        k1.printAkva();
+        k1.move();
+        k1.printAkva();
+        k1.move();
+        k1.printAkva();
+        k1.move();
+        k1.printAkva();
+        k1.move();
+        k1.printAkva();
+        k1.move();
+        k1.printAkva();
+        k1.move();
+        k1.printAkva();
+        k1.move();
+        k1.printAkva();
+        k1.move();
+        k1.printAkva();
     }
 }
