@@ -1,0 +1,5 @@
+exp(1)
+a = round(exp(1))
+b = ceil(exp(1))
+format rat, exp(1)
+format long, exp(1)
