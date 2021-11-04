@@ -79,6 +79,7 @@ int main(int argc, char const *argv[])
         }
 
         // Numerator + Denominator
+        // Same as a bisection, instead there's another formula
         numerator = b0 - a0;
         denominator = returnFunValue(b0) - returnFunValue(a0);
 

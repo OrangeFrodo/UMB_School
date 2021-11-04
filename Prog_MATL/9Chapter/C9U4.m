@@ -11,4 +11,7 @@ Z = sin(pi*(X+Y));
 mesh(X, Y, Z)
 surf(X, Y, Z)
 
-% 
+% Features
+
+colorbar
+view(16, 12)
