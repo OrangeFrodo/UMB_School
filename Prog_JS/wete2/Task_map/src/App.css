@@ -1,0 +1,152 @@
+.App {
+  margin: 0%;
+  padding: 0%;
+
+  background-color: #282c34;
+}
+
+body {
+  background-color: #282c34;
+}
+
+.App-logo {
+  position: absolute;
+  top: 250px;
+  left: 530px;
+
+  height: 390px;
+  pointer-events: none;
+}
+
+.App-dotBA {
+  position: absolute;
+  top: 550px;
+  left: 570px;
+
+  height: 8px;
+}
+
+.App-dotBB {
+  position: absolute;
+  top: 430px;
+  left: 855px;
+
+  height: 8px;
+}
+
+.App-dotZV {
+  position: absolute;
+  top: 459px;
+  left: 850px;
+
+  height: 8px;
+}
+
+.App-dotKO {
+  position: absolute;
+  top: 430px;
+  left: 1130px;
+
+  height: 8px;
+}
+
+.App-dotPR {
+  position: absolute;
+  top: 370px;
+  left: 1128px;
+
+  height: 8px;
+}
+
+.App-dotZI {
+  position: absolute;
+  top: 315px;
+  left: 778px;
+
+  height: 8px;
+}
+
+.Sidebar {
+  position: absolute;
+  left: 0px;
+
+  height: 100%;
+  width: 350px;
+
+  margin: 4%;
+
+  background-color: #35374a;
+}
+
+.tdName {
+  font-size: 40px;
+}
+
+.tdContent {
+  font-size: 20px;
+}
+
+.underCitySpace {
+  margin: 15px;
+}
+
+.App-par {
+  position: absolute;
+
+  top: 650px;
+  left: 530px;
+
+  width: 800px !important;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: #282c34;
+  }
+
+  .App-logo {
+    height: 250px;
+    pointer-events: none;
+  }
+
+  .Sidebar {
+    height: 500px;
+    width: 100%;
+
+    margin: 4%;
+
+    background-color: #35374a;
+  }
+
+  .App-par {
+    top: 650px;
+    left: 530px;
+
+    width: 800px ;
+  }
+
+  .App-header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}

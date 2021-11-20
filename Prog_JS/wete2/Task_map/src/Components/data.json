@@ -1,0 +1,38 @@
+[
+
+    {
+        "id":1,
+        "name":"Bratislava",
+        "content": "The city's history has been influenced by people of many nations and religions, including Austrians, Bulgarians, Croats, Czechs, Germans, Hungarians, Jews, Serbs and Slovaks. It was the coronation site and legislative center and capital of the Kingdom of Hungary from 1536 to 1783; eleven Hungarian kings and eight queens were crowned in St. Martin's Cathedral. Most Hungarian parliament assemblies were held here from the 17th century until the Hungarian Reform Era, and the city has been home to many Hungarian, German and Slovak historical figures. "
+    },
+    
+    {
+        "id":2,
+        "name":"Banská Bystrica",
+        "content": "Banská Bystrica is a city in central Slovakia located on the Hron River in a long and wide valley encircled by the mountain chains of the Low Tatras, the Veľká Fatra, and the Kremnica Mountains. With 76 000 inhabitants, Banská Bystrica is the sixth most populous municipality in Slovakia."
+    },
+    
+    {
+        "id":3,
+        "name":"Zvolen",
+        "content" : "Zvolen is a town in central Slovakia, situated on the confluence of Hron and Slatina rivers, close to Banská Bystrica. It is surrounded by Poľana mountain from the East, by Kremnické vrchy from the West and by Javorie and Štiavnické vrchy from the South. "
+    },
+    
+    {
+        "id":4,
+        "name":"Prešov",
+        "content" : "Prešov is a city in Eastern Slovakia. It is a seat of the administrative Prešov Region (Slovak: Prešovský kraj) and Šariš as well as the historic Sáros County of the Kingdom of Hungary. With a population of approximately 90,000 for the city, and in total about 110,000 in the metropolitan area, it is the third-largest city in Slovakia. It lends its name to the Eperjes-Tokaj Hill-Chain which was considered as the geographic entity on the first map of Hungary from 1528. There are many tourist attractions in Prešov such as castles, pools and the old town. "
+    },
+    
+    {
+        "id":5,
+        "name":"Košice",
+        "content" : "Košice is the largest city in eastern Slovakia. It is situated on the river Hornád at the eastern reaches of the Slovak Ore Mountains, near the border with Hungary. With a population of approximately 240,000, Košice is the second-largest city in Slovakia, after the capital Bratislava. "
+    },
+
+    {
+        "id":6,
+        "name":"Žilina",
+        "content" : "Žilina is a city in north-western Slovakia, around 200 kilometres (120 mi) from the capital Bratislava, close to both the Czech and Polish borders. It is the fourth largest city of Slovakia with a population of approximately 80,000, an important industrial center."
+    }
+]

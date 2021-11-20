@@ -1,5 +1,8 @@
 package com.example;
 
+import example.Osoba;
+
+
 /**
  * Hello world!
  *
