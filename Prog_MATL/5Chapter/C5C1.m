@@ -1,3 +1,4 @@
+% 5. Kapitola "Logické operácie"
 % Logic gates
 % Relacion op.
 

@@ -27,8 +27,30 @@ function App() {
     if (city === "PR") {
       cityToViewSet(3);
     }
+
+    // Zilina
     if (city === "ZI") {
       cityToViewSet(5);
+    }
+
+    // Brezno
+    if (city === "BE") {
+      cityToViewSet(6);
+    }
+
+    // Nitra
+    if (city === "NI") {
+      cityToViewSet(7);
+    }
+
+    // Trenčín
+    if (city === "TE") {
+      cityToViewSet(8);
+    }
+
+    // Trnava
+    if (city === "TR") {
+      cityToViewSet(9);
     }
 
   }
@@ -43,6 +65,12 @@ function App() {
         <img src={dot} className="App-dotKO" alt="KO" onClick={() => imageClick("KO")} />
         <img src={dot} className="App-dotPR" alt="PR" onClick={() => imageClick("PR")} />
         <img src={dot} className="App-dotZI" alt="ZI" onClick={() => imageClick("ZI")} />
+
+        <img src={dot} className="App-dotNI" alt="NI" onClick={() => imageClick("NI")} />
+        <img src={dot} className="App-dotTR" alt="TR" onClick={() => imageClick("TR")} />
+        <img src={dot} className="App-dotTE" alt="TE" onClick={() => imageClick("TE")} />
+        <img src={dot} className="App-dotBE" alt="BE" onClick={() => imageClick("BE")} />
+
         <div className="App-par">
           <p>
             Slovakia, click on a white point. Does not mather which one.

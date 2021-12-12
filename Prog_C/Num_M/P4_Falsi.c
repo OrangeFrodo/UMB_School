@@ -68,7 +68,7 @@ int main(int argc, char const *argv[])
         // Previous X
         x0 = a0 - (numerator / denominator) * returnFunValue(a0);
 
-        if ((returnFunValue(a0) * returnFunValue(b0)) < 0)
+        if ((returnFunValue(a0) * returnFunValue(x0)) < 0)
         {
             b0 = x0;
         }

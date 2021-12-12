@@ -33,6 +33,31 @@
     {
         "id":6,
         "name":"Žilina",
-        "content" : "Žilina is a city in north-western Slovakia, around 200 kilometres (120 mi) from the capital Bratislava, close to both the Czech and Polish borders. It is the fourth largest city of Slovakia with a population of approximately 80,000, an important industrial center."
+        "content" : "Žilina is a city in north-western Slovakia, around 200 kilometres from the capital Bratislava, close to both the Czech and Polish borders. It is the fourth largest city of Slovakia with a population of approximately 80,000, an important industrial center."
+    },
+
+    {
+        "id":7,
+        "name": "Brezno",
+        "content": "Brezno is located within the Horehronské podolie basin. Brezno lies between the Low Tatras mountain range and the Slovak Ore Mountains, both of which belong to the Inner Western Carpathians."
+    },
+
+    {
+        "id": 8,
+        "name": "Nitra",
+        "content": "Nitra is a city in western Slovakia, situated at the foot of Zobor Mountain in the valley of the river Nitra. With a population of about 78,353, it is the fifth largest city in Slovakia. Nitra is also one of the oldest cities in Slovakia; it was the political center of the Principality of Nitra."
+    },
+
+    {
+        "id": 9,
+        "name": "Trenčín",
+        "content": "Trenčín s a city in western Slovakia of the central Váh River valley near the Czech border, around 120 km (75 mi) from Bratislava. It has a population of more than 55,000, which makes it the eighth largest municipality of the country and is the seat of the Trenčín Region and the Trenčín District. It has a medieval castle, Trenčín Castle, on a rock above the city. "
+    },
+
+    {
+        "id": 10,
+        "name": "Trnava",
+        "content": "Trnava is a city in western Slovakia, 47 km (29 mi) to the north-east of Bratislava, on the Trnávka river. It is the capital of a kraj (Trnava Region) and of an okres (Trnava District). It is the seat of a Roman Catholic archbishopric (1541–1820 and then again since 1977). The city has a historic center. Because of the many churches within its city walls, Trnava has often been called Little Rome, or more recently, the Slovak Rome. "
     }
+
 ]

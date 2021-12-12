@@ -20,6 +20,7 @@ body {
 
 .App-dotBA {
   position: absolute;
+  cursor: pointer;
   top: 550px;
   left: 570px;
 
@@ -28,6 +29,7 @@ body {
 
 .App-dotBB {
   position: absolute;
+  cursor: pointer;
   top: 430px;
   left: 855px;
 
@@ -36,6 +38,7 @@ body {
 
 .App-dotZV {
   position: absolute;
+  cursor: pointer;
   top: 459px;
   left: 850px;
 
@@ -44,6 +47,7 @@ body {
 
 .App-dotKO {
   position: absolute;
+  cursor: pointer;
   top: 430px;
   left: 1130px;
 
@@ -52,6 +56,7 @@ body {
 
 .App-dotPR {
   position: absolute;
+  cursor: pointer;
   top: 370px;
   left: 1128px;
 
@@ -60,8 +65,45 @@ body {
 
 .App-dotZI {
   position: absolute;
+  cursor: pointer;
   top: 315px;
   left: 778px;
+
+  height: 8px;
+}
+
+.App-dotNI {
+  position: absolute;
+  cursor: pointer;
+  top: 540px;
+  left: 698px;
+
+  height: 8px;
+}
+
+.App-dotBE {
+  position: absolute;
+  cursor: pointer;
+  top: 425px;
+  left: 905px;
+
+  height: 8px;
+}
+
+.App-dotTE {
+  position: absolute;
+  cursor: pointer;
+  top: 395px;
+  left: 690px;
+
+  height: 8px;
+}
+
+.App-dotTR {
+  position: absolute;
+  cursor: pointer;
+  top: 520px;
+  left: 639px;
 
   height: 8px;
 }
@@ -99,33 +141,127 @@ body {
   width: 800px !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-}
 
 @media only screen and (max-width: 600px) {
   body {
     background-color: #282c34;
   }
 
+  .App-dotBA {
+    position: relative !important;
+    cursor: pointer;
+    top: -50px;
+    left: -180px;
+  
+    height: 8px;
+  }
+  
+  .App-dotBB {
+    position: relative !important;
+    cursor: pointer;
+    top: -120px;
+    left: -35px;
+  
+    height: 8px;
+  }
+  
+  .App-dotZV {
+    position: relative !important;
+    cursor: pointer;
+    top: -108px;
+    left: -36px;
+  
+    height: 8px;
+  }
+  
+  .App-dotKO {
+    position: relative !important;
+    cursor: pointer;
+    top: -135px;
+    left: 100px;
+  
+    height: 8px;
+  }
+  
+  .App-dotPR {
+    position: relative !important;
+    cursor: pointer;
+    top: -175px;
+    left: 98px;
+  
+    height: 8px;
+  }
+  
+  .App-dotZI {
+    position: relative !important;
+    cursor: pointer;
+    top: -195px;
+    left: -65px;
+  
+    height: 8px;
+  }
+
+  .App-dotNI {
+    position: relative !important;
+    cursor: pointer;
+    top: -108px;
+    left: -110px;
+  
+    height: 8px;
+  }
+
+  .App-dotBE {
+    position: relative !important;
+    cursor: pointer;
+    top: -186px;
+    left: 1px;
+  
+    height: 8px;
+  }
+
+  .App-dotTE {
+    position: relative !important;
+    cursor: pointer;
+    top: -183px;
+    left: -112px;
+  
+    height: 8px;
+  }
+
+  .App-dotTR {
+    position: relative !important;
+    cursor: pointer;
+    top: -128px;
+    left: -145px;
+  
+    height: 8px;
+  }
+
   .App-logo {
-    height: 250px;
+    position: unset !important;
+    height: 200px;
     pointer-events: none;
   }
 
   .Sidebar {
-    height: 500px;
-    width: 100%;
+    margin-top: 60px !important;
 
+    height: auto;
+    width: 350px;
+
+    position: unset !important;
     margin: 4%;
-
     background-color: #35374a;
   }
 
   .App-par {
-    top: 650px;
-    left: 530px;
+    position: unset !important;
+    left: -65px;
 
-    width: 800px ;
+    margin: 20px;
+
+    width: auto !important ;
+    text-align: center !important;
   }
 
   .App-header {

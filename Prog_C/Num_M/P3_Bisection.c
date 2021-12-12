@@ -21,7 +21,7 @@ float returnFunValue(float x)
 
     // 1.
     // Set function which want to be callculated
-    answ = pow(x, 2) - (3 * x) + 1;
+    answ = pow(x, 3) - (12 * x) + 8;
 
     return answ;
 }
@@ -60,7 +60,7 @@ int main(int argc, char const *argv[])
         // Previous X
         x0 = (a0 + b0) / 2;
 
-        if ((returnFunValue(a0) * returnFunValue(b0)) < 0)
+        if ((returnFunValue(a0) * returnFunValue(x0)) < 0)
         {
             b0 = x0;
         }

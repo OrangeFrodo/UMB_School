@@ -1,5 +1,4 @@
-% 
-% 
+% 4. Kapitola "Manipulácia s maticami"
 
 A = round(14 * rand(5, 6) - 7)
 A1 = A(:, 2:2:6)

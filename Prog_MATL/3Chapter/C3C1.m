@@ -1,3 +1,4 @@
+% 3. Kapitola "Maticové operácie"
 % Matrixes
 % Variables A and X inveted
 

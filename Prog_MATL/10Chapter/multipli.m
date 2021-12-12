@@ -1,3 +1,4 @@
+% 10. Kapitola "Programovanie v MATLABe (Octave)"
 % Function
 
 function[output] = multipli(k, n)

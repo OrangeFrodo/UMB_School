@@ -1,3 +1,5 @@
+% 6. Kapitola "Textové reťažce"
+
 s1 = "abcdef"
 s2 = "123456"
 
