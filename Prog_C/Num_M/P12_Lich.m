@@ -7,31 +7,52 @@
 
 format long
 
-% Funkcia 
-% Presnosť závysí od množstva hodnôt v X
-X = [2 : 0.0005 : 3];
-Y = X.^3 + 1;
-
-% Transponovani matic X a Y
-v=[X' Y'];
+% H a presnosť merania
+h = 1;
+error = 0.000001;
 
 % Interval
-a = 2; 
-b = 3;
+a = 0; b = 1;
 
-fa = 1;
-fb = max(size(X)); 
+f_Intl = 0;
+s_Intl = 0;
 
-n = fb-fa; % Náš počet delení založrný na počte X hodnôt
+do
+    s_Intl = f_Intl;
 
-w = v(fa:fb,:); % Vloženie do matice w
-delta = abs(w(2,1) - w(1,1)); % Veľkosť rozdielu medzi jednotlivými hodnotami
+    % X-ová os
+    h = h /2;
+    X = [a : h : b];
 
-%   S = v/2*(a + c)
-Int_l = (delta/2) * (v(fa,2) + v(fb,2));
+    % Funkcia 
+    % Presnosť závysí od množstva hodnôt v X
+    % Y = X.^3 + 1;
+    Y = 2.^X;
 
-for k=1:n
-    Int_l = Int_l + delta*w(k,2);
-endfor
+    % Transponovani matic X a Y
+    v=[X' Y'];
 
-display('Výsledná hodnota pre stvorec je : '), Int_l, n
+    fa = 1;
+    fb = max(size(X)); 
+
+    n = fb-fa; % Náš počet delení založrný na počte X hodnôt
+    w = v(fa:fb,:); % Vloženie do matice w
+
+    sizeOfBetweenValues = abs(w(2,1) - w(1,1)); % Veľkosť rozdielu medzi jednotlivými hodnotami
+
+    % LICHOBEŽNÍK
+    %   S = v/2*(a + c)
+    Int_l = (sizeOfBetweenValues/2) * (v(fa,2) + v(fb,2));
+
+    for k=1:n
+        Int_l = Int_l + sizeOfBetweenValues*w(k,2);
+    endfor
+
+    f_Intl = Int_l;
+    thisIterationError = f_Intl - s_Intl;
+
+until (error > abs(thisIterationError))
+
+
+display('Výsledná hodnota pre lichobeznikovu metodu je : '), Int_l, n
+display('+- : '), error

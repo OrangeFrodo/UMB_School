@@ -11,33 +11,55 @@
 
 format long
 
-% Funkcia 
-% Presnosť závysí od množstva hodnôt v X
-X = [-1 : 0.05 :1];
-Y = e.^X;
-
-% Transponovani matic X a Y
-v=[X' Y'];
+% H a presnosť merania
+h = 1;
+error = 0.000001;
 
 % Interval
-a = min(X); 
-b = max(X);
+a = 0; b = 1;
 
-fa = 1;
-fb = max(size(X));
+f_Intl = 0;
+s_Intl = 0;
 
-n = fb - fa; % Náš počet delení
-w = v(fa:fb,:); % Vloženie do matice w
+do
+    s_Intl = f_Intl;
 
-delta = abs(w(2,1) - w(1,1)); % Veľkosť rozdielu medzi jednotlivými hodnotami
-Int_o = 0;
+    % X-ová os
+    h = h /2;
+    X = [a : h : b];
 
-for k=1:n
-%   0      = 0 + 0.05 * 0.3678
-%   0.0183 = 0183 + 0.05 * 0.3867
-%   Vypočítame hodnotu 1. štvorca a následne
-%   pripočítame ďalšie, všetkých 40
-    Int_o = Int_o + delta*w(k,2);
-endfor
+    % Funkcia 
+    % Presnosť závysí od množstva hodnôt v X
+    % Y = X.^3 + 1;
+    % Y = e.^X;
+    Y = 2.^X;
 
-display('Výsledná hodnota pre stvorec je : '), Int_o, n
+    % Transponovani matic X a Y
+    v=[X' Y'];
+
+
+    fa = 1;
+    fb = max(size(X));
+
+    n = fb - fa;    % Náš počet delení
+    w = v(fa:fb,:); % Vloženie do matice w
+
+    sizeOfBetweenValues = abs(w(2,1) - w(1,1)); % Veľkosť rozdielu medzi jednotlivými hodnotami
+    Int_o = 0;
+
+    for k=1:n
+    %   0      = 0 + 0.05 * 0.3678
+    %   0.0183 = 0183 + 0.05 * 0.3867
+    %   Vypočítame hodnotu 1. štvorca a následne
+    %   pripočítame ďalšie, všetkých 40
+        Int_o = Int_o + sizeOfBetweenValues*w(k,2);
+    endfor
+
+    f_Intl = Int_o;
+    thisIterationError = f_Intl - s_Intl;
+
+until (error > abs(thisIterationError))
+
+
+display('Výsledná hodnota pre obdlznikovu metodu je : '), Int_o, n
+display('+- : '), error

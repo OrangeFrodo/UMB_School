@@ -10,17 +10,23 @@
 
 
 % Funkcia f
-f = @(x)x-4 * cos(x).^2;
-fplot(f, [-1, 5])
-grid on
+f = @(x) x-4 * cos(x).^2;
+% f = @(x) x-cos(x);
+
 
 % Intervali ktoré vyhovujú podmienke
 a = 3.4;
 b = 3.6;
+% a = 0.5;
+% b = 1;
+
 
 % Derivácie funkcie f
 df  = @(x)1+8 * cos(x).* sin(x);
 dff = @(x) -8 * sin(x).^2 + 8 * cos(x).^2;
+
+%df  = @(x) 1 + sin(x);
+%dff = @(x) cos(x);
 
 % Vypocitanie intervalu pre derivacie
 x = a : 0.01 : b;
@@ -66,4 +72,12 @@ while (abs(x0 - x) > error)
 
   fprintf('Iterácia %d: ', i)
   x
+
 endwhile
+
+fplot(f, [-1, 5], "b--")
+hold on
+plot(x, 0, "r*")
+plot(x, 0, "go")
+
+grid on

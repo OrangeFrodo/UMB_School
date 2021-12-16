@@ -3,8 +3,6 @@ import "../App.css";
 
 import JsonData from './data.json'
 
-
-
 export default function Sidebar(props) {
 
     const Display = JsonData.map(

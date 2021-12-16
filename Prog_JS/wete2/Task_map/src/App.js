@@ -12,18 +12,28 @@ function App() {
 
 
   const imageClick = (city) => {
+
+    // Bratislava
     if (city === "BA") {
       cityToViewSet(0);
     }
+
+    // Banská Bystrica
     if (city === "BB") {
       cityToViewSet(1);
     }
+
+    // Zvolen
     if (city === "ZV") {
       cityToViewSet(2);
     }
+
+    // Kosice
     if (city === "KO") {
       cityToViewSet(4);
     }
+
+    // Poprad
     if (city === "PR") {
       cityToViewSet(3);
     }
@@ -65,7 +75,6 @@ function App() {
         <img src={dot} className="App-dotKO" alt="KO" onClick={() => imageClick("KO")} />
         <img src={dot} className="App-dotPR" alt="PR" onClick={() => imageClick("PR")} />
         <img src={dot} className="App-dotZI" alt="ZI" onClick={() => imageClick("ZI")} />
-
         <img src={dot} className="App-dotNI" alt="NI" onClick={() => imageClick("NI")} />
         <img src={dot} className="App-dotTR" alt="TR" onClick={() => imageClick("TR")} />
         <img src={dot} className="App-dotTE" alt="TE" onClick={() => imageClick("TE")} />
