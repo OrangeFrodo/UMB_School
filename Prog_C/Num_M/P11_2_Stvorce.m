@@ -7,12 +7,15 @@ y = [2 5 3 4];
 
 n = length(x);
 
+% Inicializoanie premenných
 X = 0;
 Xpow2 = 0;
 XY = 0;
 Y = 0;
+finalY = 0;
+finalX = 0;
 
-
+% SUm of 
 for i = 1 : n;
     X = X + x(i);
     Xpow2 = Xpow2 + x(i)*x(i);
@@ -20,9 +23,7 @@ for i = 1 : n;
     XY = XY + x(i)*y(i);
 endfor
 
-finalY = 0;
-finalX = 0;
-
+% Riešením sústavy sú hodnoty :
 finalX = (n*XY - X * Y) / (n* Xpow2 - X * X);
 finalY = (Y - finalY*X) / n;
 
@@ -36,3 +37,4 @@ f = @(x) finalX*(x) + finalY;
 yInt = f(xInt);
 
 plot(xInt, yInt, "r--")
+title("Výsledný grag")
