@@ -12,11 +12,11 @@
 format long
 
 % H a presnosť merania
-h = 1;
+h = pi/2;
 error = 0.000001;
 
 % Interval
-a = 0; b = 1;
+a = 0; b = pi/2;
 
 f_Intl = 0;
 s_Intl = 0;
@@ -32,7 +32,7 @@ do
     % Presnosť závysí od množstva hodnôt v X
     % Y = X.^3 + 1;
     % Y = e.^X;
-    Y = 2.^X;
+    Y = sin(X);
 
     % Transponovani matic X a Y
     v=[X' Y'];
