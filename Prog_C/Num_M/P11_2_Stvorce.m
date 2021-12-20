@@ -19,7 +19,7 @@ Y = 0;
 finalY = 0;
 finalX = 0;
 
-% SUm of 
+% Sum of 
 for i = 1 : n;
     X = X + x(i);
     Xpow2 = Xpow2 + x(i)*x(i);

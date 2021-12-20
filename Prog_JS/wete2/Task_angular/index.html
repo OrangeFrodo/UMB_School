@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <body>
+    <!-- Angular application -->
+    <div ng-app="myApp" ng-controller="myCtrl" class="myApp">
+      <h1>Hello this is my Crypto-calculator</h1>
+
+      <div ng-app="calculator" ng-init="quantity=1; myCol='grey'">
+        <div style="margin: 20px">
+          Eur:
+          <input placeholder="Eur" required type="number" ng-model="quantity" />
+        </div>
+        <div style="margin: 20px">
+          Crypto:
+          <select ng-model="price.model">
+            <option
+              ng-repeat="x in names | orderBy:myOrderBy"
+              value="{{x.price}}"
+            >
+              {{x.crypto}}
+            </option>
+          </select>
+        </div>
+        <div style="margin: 50px">
+          Number of coins : {{ quantity / price.model}}
+        </div>
+      </div>
+
+      <div style="margin: 80px">
+        <h2>Current crypto price (not real-time).</h2>
+        <table border="2" width="80%" align="center">
+          <tr>
+            <th ng-click="orderByMe('crypto')">Crypto</th>
+            <th ng-click="orderByMe('price')">Price</th>
+          </tr>
+          <tr ng-repeat="x in names | orderBy:myOrderBy">
+            <td>{{x.crypto}}</td>
+            <td>{{x.price}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+
+  <!--Angular script-->
+  <script>
+    angular.module("myApp", []).controller("myCtrl", function ($scope) {
+      $scope.names = [
+        { crypto: "Ethereum", price: "3455.25" },
+        { crypto: "Bitcoin", price: "41540.24" },
+        { crypto: "XPR", price: "2.13" },
+        { crypto: "Doge", price: "0.15" },
+        { crypto: "Polkadot", price: "24.05" },
+      ];
+      $scope.orderByMe = function (x) {
+        $scope.myOrderBy = x;
+      };
+    });
+  </script>
+</html>
