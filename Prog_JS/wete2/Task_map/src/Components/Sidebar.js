@@ -1,4 +1,6 @@
 import React from 'react'
+
+
 import "../App.css";
 
 import JsonData from './data.json'
@@ -11,6 +13,9 @@ export default function Sidebar(props) {
                 <tr className="underCity">
                     <div className="underCitySpace">
                         <td className="tdName">{city.name}</td>
+                    </div>
+                    <div className="underCitySpace">
+                        <img className="picture" alt="pictureOfCity" src={window.location.origin + city.pic}/>
                     </div>
                     <div className="underCitySpace">
                         <td className="tdContent">{city.content}</td>

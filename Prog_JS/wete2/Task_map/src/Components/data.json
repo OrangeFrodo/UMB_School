@@ -3,60 +3,70 @@
     {
         "id":1,
         "name":"Bratislava",
+        "pic": "/assets/BA.jpg",
         "content": "The city's history has been influenced by people of many nations and religions, including Austrians, Bulgarians, Croats, Czechs, Germans, Hungarians, Jews, Serbs and Slovaks. It was the coronation site and legislative center and capital of the Kingdom of Hungary from 1536 to 1783; eleven Hungarian kings and eight queens were crowned in St. Martin's Cathedral. Most Hungarian parliament assemblies were held here from the 17th century until the Hungarian Reform Era, and the city has been home to many Hungarian, German and Slovak historical figures. "
     },
     
     {
         "id":2,
         "name":"Banská Bystrica",
+        "pic": "/assets/BB.jpg",
         "content": "Banská Bystrica is a city in central Slovakia located on the Hron River in a long and wide valley encircled by the mountain chains of the Low Tatras, the Veľká Fatra, and the Kremnica Mountains. With 76 000 inhabitants, Banská Bystrica is the sixth most populous municipality in Slovakia."
     },
     
     {
         "id":3,
         "name":"Zvolen",
+        "pic": "/assets/ZV.jpg",
         "content" : "Zvolen is a town in central Slovakia, situated on the confluence of Hron and Slatina rivers, close to Banská Bystrica. It is surrounded by Poľana mountain from the East, by Kremnické vrchy from the West and by Javorie and Štiavnické vrchy from the South. "
     },
     
     {
         "id":4,
         "name":"Prešov",
+        "pic": "/assets/PR.jpg",
         "content" : "Prešov is a city in Eastern Slovakia. It is a seat of the administrative Prešov Region (Slovak: Prešovský kraj) and Šariš as well as the historic Sáros County of the Kingdom of Hungary. With a population of approximately 90,000 for the city, and in total about 110,000 in the metropolitan area, it is the third-largest city in Slovakia. It lends its name to the Eperjes-Tokaj Hill-Chain which was considered as the geographic entity on the first map of Hungary from 1528. There are many tourist attractions in Prešov such as castles, pools and the old town. "
     },
     
     {
         "id":5,
         "name":"Košice",
+        "pic": "/assets/KO.jpg",
         "content" : "Košice is the largest city in eastern Slovakia. It is situated on the river Hornád at the eastern reaches of the Slovak Ore Mountains, near the border with Hungary. With a population of approximately 240,000, Košice is the second-largest city in Slovakia, after the capital Bratislava. "
     },
 
     {
         "id":6,
         "name":"Žilina",
+        "pic": "/assets/ZI.jpg",
         "content" : "Žilina is a city in north-western Slovakia, around 200 kilometres from the capital Bratislava, close to both the Czech and Polish borders. It is the fourth largest city of Slovakia with a population of approximately 80,000, an important industrial center."
     },
 
     {
         "id":7,
         "name": "Brezno",
+        "pic": "/assets/BR.jpg",
         "content": "Brezno is located within the Horehronské podolie basin. Brezno lies between the Low Tatras mountain range and the Slovak Ore Mountains, both of which belong to the Inner Western Carpathians."
     },
 
     {
         "id": 8,
         "name": "Nitra",
+        "pic": "/assets/NI.jpg",
         "content": "Nitra is a city in western Slovakia, situated at the foot of Zobor Mountain in the valley of the river Nitra. With a population of about 78,353, it is the fifth largest city in Slovakia. Nitra is also one of the oldest cities in Slovakia; it was the political center of the Principality of Nitra."
     },
 
     {
         "id": 9,
         "name": "Trenčín",
+        "pic": "/assets/TR.jpg",
         "content": "Trenčín s a city in western Slovakia of the central Váh River valley near the Czech border, around 120 km (75 mi) from Bratislava. It has a population of more than 55,000, which makes it the eighth largest municipality of the country and is the seat of the Trenčín Region and the Trenčín District. It has a medieval castle, Trenčín Castle, on a rock above the city. "
     },
 
     {
         "id": 10,
         "name": "Trnava",
+        "pic": "/assets/TN.jpg",
         "content": "Trnava is a city in western Slovakia, 47 km (29 mi) to the north-east of Bratislava, on the Trnávka river. It is the capital of a kraj (Trnava Region) and of an okres (Trnava District). It is the seat of a Roman Catholic archbishopric (1541–1820 and then again since 1977). The city has a historic center. Because of the many churches within its city walls, Trnava has often been called Little Rome, or more recently, the Slovak Rome. "
     }
 

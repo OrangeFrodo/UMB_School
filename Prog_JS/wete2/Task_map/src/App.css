@@ -129,6 +129,7 @@ body {
 }
 
 .underCitySpace {
+  text-align: center;
   margin: 15px;
 }
 
@@ -141,7 +142,6 @@ body {
   width: 800px !important;
 }
 
-
 @media only screen and (max-width: 600px) {
   body {
     background-color: #282c34;
@@ -152,52 +152,52 @@ body {
     cursor: pointer;
     top: -50px;
     left: -180px;
-  
+
     height: 8px;
   }
-  
+
   .App-dotBB {
     position: relative !important;
     cursor: pointer;
     top: -120px;
     left: -35px;
-  
+
     height: 8px;
   }
-  
+
   .App-dotZV {
     position: relative !important;
     cursor: pointer;
     top: -108px;
     left: -36px;
-  
+
     height: 8px;
   }
-  
+
   .App-dotKO {
     position: relative !important;
     cursor: pointer;
     top: -135px;
     left: 100px;
-  
+
     height: 8px;
   }
-  
+
   .App-dotPR {
     position: relative !important;
     cursor: pointer;
     top: -175px;
     left: 98px;
-  
+
     height: 8px;
   }
-  
+
   .App-dotZI {
     position: relative !important;
     cursor: pointer;
     top: -195px;
     left: -65px;
-  
+
     height: 8px;
   }
 
@@ -206,7 +206,7 @@ body {
     cursor: pointer;
     top: -108px;
     left: -110px;
-  
+
     height: 8px;
   }
 
@@ -215,7 +215,7 @@ body {
     cursor: pointer;
     top: -186px;
     left: 1px;
-  
+
     height: 8px;
   }
 
@@ -224,7 +224,7 @@ body {
     cursor: pointer;
     top: -183px;
     left: -112px;
-  
+
     height: 8px;
   }
 
@@ -233,7 +233,7 @@ body {
     cursor: pointer;
     top: -128px;
     left: -145px;
-  
+
     height: 8px;
   }
 
@@ -285,4 +285,10 @@ body {
 
 .App-link {
   color: #61dafb;
+}
+
+.picture {
+  text-align: center;
+  height: 180px;
+  width: auto;
 }
