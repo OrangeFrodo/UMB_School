@@ -25,6 +25,7 @@
     <div class="container">
       <p id="inputField"></p>
     </div>
+
     <script>
       // Task 1
       const formData = { cieties: {} };
@@ -37,6 +38,7 @@
       xhr.onload = function () {
         
         // ! s touto podmienkou mi pomohli
+        // Získa sa request 
         if (this.status == 200) {
           const data = this.responseXML.getElementsByTagName("data")[0];
 

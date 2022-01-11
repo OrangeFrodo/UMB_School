@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <title>Započet_cvik</title>
+  </head>
+  <body>
+    <h1>Read 一本书</h1>
+    <p>Názory na prečítané knihy</p>
+
+    <!--Container na vloženie do XML-->
+    <div id="container">
+      <input
+        type="text"
+        name="content"
+        list="bookieList"
+        id="content"
+        onchange="changeText()"
+      />
+      <datalist id="bookieList"></datalist>
+    </div>
+
+    <div class="container">
+      <p id="inputField">Aj</p>
+    </div>
+  </body>
+
+  <script>
+    // GETING INFO
+    const formData = {
+      books: {},
+      anotherFormDataTest: {},
+    };
+
+    // XHR LOAD
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "data.xml", true);
+
+    xhr.onload = function () {
+
+      //GET FIRST STATUS (if XML exists)
+      if (this.status == 200) {
+        // Load data
+        const data = this.responseXML.getElementsByTagName("data")[0];
+
+        // For each in array 
+        
+        const bookList = Array.from(
+          data.getElementsByTagName("Books")[0].childNodes
+        ).filter((node) => node.nodeType === 1);
+
+        // const bookList send to input field
+        bookList.forEach((book) => {
+          formData.books[book.nodeName] =
+            book.childNodes[1].childNodes[0].nodeValue;
+
+          const newOption = new Option(book.nodeName, book.nodeName);
+          bookieList.appendChild(newOption);
+        });
+        
+      }
+    };
+
+    // Send final xhr
+    xhr.send();
+
+    // Change text
+    const changeText = () => {
+      const content = document.getElementById("content").value;
+      const text = (document.getElementById("inputField").innerHTML =
+        formData.books[content] ?? "");
+    };
+  </script>
+
+  <!--Bootstrap-->
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
+</html>

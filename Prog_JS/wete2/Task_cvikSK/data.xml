@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<data>
+    <Books>
+        <OnChina>
+            <init>On China brings well structured point of view on Comunisty party of China</init>
+        </OnChina>
+        <Meditation>
+            <init>Meditations from Marcus Aurelius are a must have for this century</init>
+        </Meditation>
+        <Brave>
+            <init>When is enought really enought? Where can sociaty end up? </init>
+        </Brave>
+    </Books>
+</data>
