@@ -53,10 +53,13 @@ fun main(args: Array<String>) {
 
 
     // Homework
-
+    /*
     homeworkFun()
     homeworkFunction(5, 9)
     val resultFUnction: Int = factorialFun(6)
     println(resultFUnction)
+    */
 
+    homework1()
+    factorial()
 }
