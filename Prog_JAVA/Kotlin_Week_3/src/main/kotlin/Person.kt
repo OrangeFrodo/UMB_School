@@ -1,3 +1,4 @@
+/*
 data class Person(
     var name: String = "Dan",
     var age: Int
@@ -7,4 +8,13 @@ data class Person(
     fun getInfo() : String {
         return "$id and $name"
     }
+}
+
+ */
+
+class Person(
+    val id: Int = 0,
+    var name: String = "Adam"
+) {
+
 }
