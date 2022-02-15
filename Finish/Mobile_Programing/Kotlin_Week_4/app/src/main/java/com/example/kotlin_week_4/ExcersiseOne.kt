@@ -1,6 +1,5 @@
 package com.example.kotlin_week_4
 
-<<<<<<< HEAD
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
@@ -59,5 +58,3 @@ fun TextInput(label: String) {
         OutlinedTextField(value = "", onValueChange = {})
     }
 }
-=======
->>>>>>> ca1d65b9cfad4f0b323e2cf29c8f59d47d283fb1
