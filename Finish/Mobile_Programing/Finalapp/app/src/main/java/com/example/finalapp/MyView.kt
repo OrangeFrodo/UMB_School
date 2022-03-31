@@ -1,37 +1,37 @@
 package com.example.finalapp
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
+import android.util.Log
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.OutlinedButton
 import androidx.compose.material.OutlinedTextField
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 @Composable
 fun MainView() {
-    var text by remember {mutableStateOf("")}
-
-    val firestore = Firebase.firestore
-
-    val user = User("Jakub", "Daxner")
-
-    // Save to collection
-    firestore
-        .collection("Users")
-        .add(user)
+    var userVM = viewModel<UserViewModel>()
+    
+    if(userVM.username.value.isEmpty()) {
+        LoginView(userVM)
+    } else {
+        Row() {
+            Text(text = userVM.username.value)
+        }
+    }
 }
 
 @Composable
-fun LoginView() {
+fun LoginView(userVM: UserViewModel) {
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
+
 
     Column(
         modifier = Modifier
@@ -47,9 +47,10 @@ fun LoginView() {
         OutlinedTextField(
             value = password, 
             onValueChange = {password = it},
-            label = { Text(text = "Password")}
+            label = { Text(text = "Password")},
+            visualTransformation = PasswordVisualTransformation()
         )
-        OutlinedButton(onClick = { /*TODO*/ }) {
+        OutlinedButton(onClick = {userVM.loginUser(email, password)}) {
             Text(text = "Login")
         }
     }
