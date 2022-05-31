@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text\xsl" href="main.xsl"?>
+<menu>
+    <product>
+        <name>HotDog</name>
+        <alergens>1, 2, 3, 4</alergens>
+        <price>5€</price>
+        <description>wery good hot dog</description>
+    </product>
+    <product>
+        <name>Hamburger</name>
+        <alergens>4, 5, 6</alergens>
+        <price>10€</price>
+        <description>wery good hamburger</description>
+    </product>
+</menu>
