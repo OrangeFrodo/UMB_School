@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "794129694732",
+    "project_id": "final-app-native-programing",
+    "storage_bucket": "final-app-native-programing.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794129694732:android:8341f062343fb0e813ae29",
+        "android_client_info": {
+          "package_name": "com.example.finalapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "794129694732-bu1poa9srs2eetmckukk2pu22orr5vpm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_SKwqcR3s4ym8fRjHhnk_mU6DwvYsbR4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "794129694732-bu1poa9srs2eetmckukk2pu22orr5vpm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

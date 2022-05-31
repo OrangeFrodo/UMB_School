@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <form name="loginForm" class="d-flex flex-column">
+      <div class="d-inline-flex p-3">
+        <p class="pr-3">Meno</p>
+        <input id="name" type="text" name="textName" />
+      </div>
+      <div class="d-inline-flex p-3">
+        <p class="pr-3">Priezvisko</p>
+        <input id="last" type="text" name="textLast" />
+      </div>
+    </form>
+
+    <div>
+      <p id="para">Povodny text</p>
+      <button id="button">Zmen text</button>
+    </div>
+
+    <form name="lastForm">
+      <div class="d-inline-flex p-3">
+        <p id="test2" class="pr-3">Input field</p>
+        <input id="name2" type="text" name="textName" />
+        <button id="newBtn">Print input</button>
+      </div>
+      <p id="test1"></p>
+    </form>
+  </body>
+
+  
+  <script>
+    // // Task 1
+    $(document).ready(function () {
+      $("input").click(function () {
+        $("input").css("background-color", "#ffffff");
+        $(this).css("background-color", "#808080");
+      });
+    });
+  </script>
+  <script>
+    // Task 2
+    $(document).ready(function () {
+      $("#button").click(function () {
+        $("#para").css("color", "red");
+        $("#para").css("font-size", "30px");
+        $("#para").append("  plus pripojený text")
+      });
+    });
+  </script>
+  <script>
+    // Task 3
+    $(document).ready(function () {
+      $("#newBtn").click(function () {
+        // $("docId -> # before")
+        if ($("#name2").val() != "") {
+          alert("Text uspesne vlozeny");
+        } else {
+          alert("Input field prazdny");
+        }
+        
+        return $("#test1").text($("#name2").val());
+      });
+    });
+  </script>
+</html>

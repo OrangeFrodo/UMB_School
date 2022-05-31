@@ -1,0 +1,294 @@
+.App {
+  margin: 0%;
+  padding: 0%;
+
+  background-color: #282c34;
+}
+
+body {
+  background-color: #282c34;
+}
+
+.App-logo {
+  position: absolute;
+  top: 250px;
+  left: 530px;
+
+  height: 390px;
+  pointer-events: none;
+}
+
+.App-dotBA {
+  position: absolute;
+  cursor: pointer;
+  top: 550px;
+  left: 570px;
+
+  height: 8px;
+}
+
+.App-dotBB {
+  position: absolute;
+  cursor: pointer;
+  top: 430px;
+  left: 855px;
+
+  height: 8px;
+}
+
+.App-dotZV {
+  position: absolute;
+  cursor: pointer;
+  top: 459px;
+  left: 850px;
+
+  height: 8px;
+}
+
+.App-dotKO {
+  position: absolute;
+  cursor: pointer;
+  top: 430px;
+  left: 1130px;
+
+  height: 8px;
+}
+
+.App-dotPR {
+  position: absolute;
+  cursor: pointer;
+  top: 370px;
+  left: 1128px;
+
+  height: 8px;
+}
+
+.App-dotZI {
+  position: absolute;
+  cursor: pointer;
+  top: 315px;
+  left: 778px;
+
+  height: 8px;
+}
+
+.App-dotNI {
+  position: absolute;
+  cursor: pointer;
+  top: 540px;
+  left: 698px;
+
+  height: 8px;
+}
+
+.App-dotBE {
+  position: absolute;
+  cursor: pointer;
+  top: 425px;
+  left: 905px;
+
+  height: 8px;
+}
+
+.App-dotTE {
+  position: absolute;
+  cursor: pointer;
+  top: 395px;
+  left: 690px;
+
+  height: 8px;
+}
+
+.App-dotTR {
+  position: absolute;
+  cursor: pointer;
+  top: 520px;
+  left: 639px;
+
+  height: 8px;
+}
+
+.Sidebar {
+  position: absolute;
+  left: 0px;
+
+  height: 100%;
+  width: 350px;
+
+  margin: 4%;
+
+  background-color: #35374a;
+}
+
+.tdName {
+  font-size: 40px;
+}
+
+.tdContent {
+  font-size: 20px;
+}
+
+.underCitySpace {
+  text-align: center;
+  margin: 15px;
+}
+
+.App-par {
+  position: absolute;
+
+  top: 650px;
+  left: 530px;
+
+  width: 800px !important;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: #282c34;
+  }
+
+  .App-dotBA {
+    position: relative !important;
+    cursor: pointer;
+    top: -50px;
+    left: -180px;
+
+    height: 8px;
+  }
+
+  .App-dotBB {
+    position: relative !important;
+    cursor: pointer;
+    top: -120px;
+    left: -35px;
+
+    height: 8px;
+  }
+
+  .App-dotZV {
+    position: relative !important;
+    cursor: pointer;
+    top: -108px;
+    left: -36px;
+
+    height: 8px;
+  }
+
+  .App-dotKO {
+    position: relative !important;
+    cursor: pointer;
+    top: -135px;
+    left: 100px;
+
+    height: 8px;
+  }
+
+  .App-dotPR {
+    position: relative !important;
+    cursor: pointer;
+    top: -175px;
+    left: 98px;
+
+    height: 8px;
+  }
+
+  .App-dotZI {
+    position: relative !important;
+    cursor: pointer;
+    top: -195px;
+    left: -65px;
+
+    height: 8px;
+  }
+
+  .App-dotNI {
+    position: relative !important;
+    cursor: pointer;
+    top: -108px;
+    left: -110px;
+
+    height: 8px;
+  }
+
+  .App-dotBE {
+    position: relative !important;
+    cursor: pointer;
+    top: -186px;
+    left: 1px;
+
+    height: 8px;
+  }
+
+  .App-dotTE {
+    position: relative !important;
+    cursor: pointer;
+    top: -183px;
+    left: -112px;
+
+    height: 8px;
+  }
+
+  .App-dotTR {
+    position: relative !important;
+    cursor: pointer;
+    top: -128px;
+    left: -145px;
+
+    height: 8px;
+  }
+
+  .App-logo {
+    position: unset !important;
+    height: 200px;
+    pointer-events: none;
+  }
+
+  .Sidebar {
+    margin-top: 60px !important;
+
+    height: auto;
+    width: 350px;
+
+    position: unset !important;
+    margin: 4%;
+    background-color: #35374a;
+  }
+
+  .App-par {
+    position: unset !important;
+    left: -65px;
+
+    margin: 20px;
+
+    width: auto !important ;
+    text-align: center !important;
+  }
+
+  .App-header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.picture {
+  text-align: center;
+  height: 180px;
+  width: auto;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX</title>
+  </head>
+  <body>
+    <h1>Ajax</h1>
+    <p>
+      Ak sa nezobrazujú možnosti, double-click na window. Potom po zvolení mesta
+      stlačte enter
+    </p>
+    <div class="container">
+      <input
+        type="text"
+        name="content"
+        list="citiesList"
+        id="content"
+        onchange="changeText()"
+      />
+      <datalist id="citiesList"></datalist>
+    </div>
+    <div class="container">
+      <p id="inputField"></p>
+    </div>
+
+    <script>
+      // Task 1
+      const formData = { cieties: {} };
+      const xhr = new XMLHttpRequest();
+
+      // Open xml file // GET Request
+      xhr.open("GET", "data.xml", true);
+
+      // If exists load data
+      xhr.onload = function () {
+        
+        // ! s touto podmienkou mi pomohli
+        // Získa sa request 
+        if (this.status == 200) {
+          const data = this.responseXML.getElementsByTagName("data")[0];
+
+          // For each in array
+          const cityList = Array.from(
+            data.getElementsByTagName("Cities")[0].childNodes
+          ).filter((node) => node.nodeType === 1);
+          cityList.forEach((city) => {
+            formData.cieties[city.nodeName] =
+              city.childNodes[1].childNodes[0].nodeValue;
+
+            const newOption = new Option(city.nodeName, city.nodeName);
+            citiesList.appendChild(newOption);
+          });
+        }
+      };
+      xhr.send();
+
+      const changeText = () => {
+        const content = document.getElementById("content").value;
+        const text = (document.getElementById("inputField").innerHTML =
+          formData.cieties[content] ?? "");
+      };
+    </script>
+  </body>
+</html>

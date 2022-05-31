@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<data>
+   <Cities>
+      <London>
+         <innit>London is the capital and largest city of England and the United Kingdom. It stands on the River Thames in south-east England at the head of a 50-mile (80 km) estuary down to the North Sea, and has been a major settlement for two millennia.</innit>
+      </London>
+      <Vienna>
+         <innit>Vienna is known for its high quality of life. In a 2005 study of 127 world cities, the Economist Intelligence Unit ranked the city first (in a tie with Vancouver and San Francisco) for the world's most livable cities. </innit>
+      </Vienna>
+      <Paris>
+         <innit>Paris is a major railway, highway, and air-transport hub served by two international airports: Paris–Charles de Gaulle (the second-busiest airport in Europe) and Paris–Orly.</innit>
+      </Paris>
+   </Cities>
+</data>

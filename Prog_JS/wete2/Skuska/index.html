@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <title>Document</title>
+    <!--Styles-->
+    <style>
+      body {
+        margin: 40px;
+      }
+      .headerZap {
+        color: green;
+      }
+      .Numbers {
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Header-->
+    <div class="headerZap text-center">
+      <h1 id="headerZa">Zápočet</h1>
+    </div>
+    <!--Form-->
+    <form name="form">
+      <p>Email</p>
+      <input id="email" type="text" name="email" />
+      <p id="err1" style="color: red; display: none">Zly email</p>
+      <p>Cislo</p>
+      <input id="num" type="text" name="number" />
+      <p id="err2" style="color: red; display: none">Nezadal si cislo</p>
+      <input type="button" value="Zaraď číslo" onClick="validForm()" />
+    </form>
+    <!--Nums-->
+    <div class="Numbers">
+      <div>
+        <h2>Parne cisla:</h2>
+        <p id="oddNums"></p>
+      </div>
+      <div>
+        <h2>Neparne cisla:</h2>
+        <p id="evenNums"></p>
+      </div>
+    </div>
+    <!--"Main" function-->
+    <script>
+      function validForm() {
+        let specialSymbol = "@";
+        let email = document.getElementById("email");
+        let num = document.getElementById("num");
+        let err1 = document.getElementById("err1");
+        let err2 = document.getElementById("err2");
+
+        let valid = false;
+        valid = email.value.match(specialSymbol);
+
+        console.log(valid);
+        if (num.value == "") {
+          err2.style.display = "block";
+        }
+        if (email.value == "") {
+          err1.style.display = "block";
+        }
+
+        if (valid) {
+          document.getElementById("headerZa").innerHTML = "Ahoj " + email.value;
+        } else {
+          err1.style.display = "block";
+        }
+
+        if (isNaN(num.value) == false) {
+          if (num.value % 2 == 0) {
+            document.getElementById("oddNums").innerHTML += num.value;
+          } else {
+            document.getElementById("evenNums").innerHTML += num.value;
+          }
+        }
+      }
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
